@@ -4,12 +4,25 @@ function Phone(brand, price, color) {
 	this.color = color;
 }
 Phone.prototype.printInfo = function() {
-		console.log("The phone brand is " + this.brand + ", color is " + this.color + " and the price is " + this.price + ".");
+	console.log("The phone brand is " + this.brand + ", color is " + this.color + " and the price is " + this.price + ".");
 }
-var SamsungGalaxyS6 = new Phone("Samsung", 1950, "black");
+var samsungGalaxyS6 = new Phone("Samsung", 1950, "black");
 var iPhone6S = new Phone("Apple", 2250, "silver");
-var OnePlusOne = new Phone("OnePlus", 156, "white");
+var onePlusOne = new Phone("OnePlus", 156, "white");
 
-SamsungGalaxyS6.printInfo();
+samsungGalaxyS6.printInfo();
 iPhone6S.printInfo();
-OnePlusOne.printInfo();
+onePlusOne.printInfo();
+
+Phone.prototype.applyDiscount = function (applyDiscount) {
+	
+	this.price = (this.price - applyDiscount);
+}
+
+samsungGalaxyS6.applyDiscount(100);
+iPhone6S.applyDiscount(100);
+onePlusOne.applyDiscount(100);
+
+samsungGalaxyS6.printInfo();
+iPhone6S.printInfo();
+onePlusOne.printInfo();

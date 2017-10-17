@@ -14,9 +14,9 @@ samsungGalaxyS6.printInfo();
 iPhone6S.printInfo();
 onePlusOne.printInfo();
 
-Phone.prototype.applyDiscount = function (applyDiscount) {
+Phone.prototype.applyDiscount = function (discount) {
 	
-	this.price = (this.price - applyDiscount);
+	this.price = this.price - discount;
 }
 
 samsungGalaxyS6.applyDiscount(100);
